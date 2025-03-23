@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лендинг-страница для продукта</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #3f3d3e;
+            color: rgb(253, 251, 251);
+            padding-top: 20px;
+            min-height: 65px;
+            border-bottom: 3px solid #c5bdc5;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.4em;
+            display: inline;
+        }
+
+        section#product {
+            padding: 20px;
+        }
+
+        #product h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        #product p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+
+        .button {
+            background-color: #5e5c5c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        section#reviews {
+            background: #ddd;
+            padding: 20px;
+        }
+
+        #reviews h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        #reviews h3{
+            font-size: 1.8em;
+        }
+        
+        #reviews h5{
+            font-size: 1.8em;
+        }
+        
+       
+        #reviews p {
+            font-style: italic;
+        }
+
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            
+            background-color: #4d4a4b;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Тушь для ресниц DARLNG</h1>
+        </div>
+    </header>
+
+    <section id="product">
+        <div class="container">
+            <h2><u>Описание</u></h2>
+            <p> Чтобы подчеркнуть твои красивые глаза объемными, нескончаемо длинными ресницами. Эта веган-френдли тушь имеет кремообразную текстуру, изготовлена из карнаубского воска и надежно покрывает каждую ресничку интенсивным оттенком, который будет держаться так долго, как тебе необходимо. Касторовое Масло в составе придает блеск, а микрогранулы уплотняют и удлиняют ресницы.</p>
+            
+        
+            <title>Image Transition</title>
+            <style>
+                #image-container {
+                    position: relative;
+                    width: 300px;
+                    height: 200px;
+                    overflow: hidden;
+                }
+         
+                #image-container img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                }
+         
+                #image-container img.active {
+                    opacity: 1;
+                }
+            </style>
+            </head>
+            <body>
+            <!-- Пример изображения продукта -->
+            <div id="image-container">
+            <p><img src="photo_5404389217670395329_x.jpg"  alt="Изображение продукта" style="max-width: 100%;" class="active"></p>
+            <p><img src="photo_5404389217670395695_x.jpg" alt="Изображение продукта" style="max-width: 100%;"></p>
+            <p><img src="photo_5404389217670395696_x (1).jpg" alt="Изображение продукта" style="max-width: 100%;"></p>
+            <p><img src="photo_5404389217670395697_x.jpg" alt="Изображение продукта" style="max-width: 100%;"></p>
+            <p><img src="photo_5404389217670395698_x.jpg" alt="Изображение продукта" style="max-width: 100%;"></p>
+            </div>
+
+            <button onclick="changeImage()">далее</button>
+
+   <script>
+       let currentImageIndex = 0;
+       const images = document.querySelectorAll('#image-container img');
+
+       function changeImage() {
+           images[currentImageIndex].classList.remove('active');
+           currentImageIndex = (currentImageIndex + 1) % images.length;
+           images[currentImageIndex].classList.add('active');
+       }
+   </script>
+
+   
+   
+        </div>
+    </section>
+
+    <section id="nalichie">
+        <div class="container">
+            <h6> 
+                <p>
+                <select><option>+1</option>
+            <option>+2</option>
+            <option>+3</option>
+            <option>+4</option>
+            <option>+5</option>
+            <option>+6</option>
+            <option>+7</option>
+            </select>
+            <h7><button class="button">Добавить в корзину</button></h7>
+        </p>
+            </h6>
+        </div>
+    </section>
+
+    <section id="sena">
+        <div class="container">
+            <h7>
+            <div class="current-price">640 <span class="currency">₽</span></div>
+            <div class="discount-price">1500 <span class="currency">₽</span></div>
+            <div class="discount-text">со скидкой 50%</div>
+            
+            
+        </div>
+    </section>
+        
+        <style>
+
+        #reviews h7{
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .current-price {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #000;
+        }
+        
+        .discount-price {
+            font-size: 1.2em;
+            color: #999; 
+            text-decoration: line-through;
+            margin-left: 10px;
+            display: inline-block; 
+        }
+        
+        .discount-text {
+            font-size: 0.8em;
+            color: #999;
+            margin-bottom: 10px;
+        }
+        
+        .original-price-text {
+            font-size: 0.8em;
+            color: #999;
+            display: inline-block;
+            margin-left: 5px; 
+        }
+        
+        .currency {
+            font-size: 0.8em; 
+        }
+        
+        .installment-text {
+            margin-right: 5px;
+        }
+       
+        </style>
+        
+        
+    <section id="podrobn1">
+        <div class="container">
+            <h3><u>Пункт выдачи заказа:</u>
+                <p><select><option><p>Самовывоз(магазины,ПВЗ)</p></option>
+                <option><p>Курьер(служба доставки)</p></option></select></h3>
+        </div>
+    </section>
+
+    <section id="dop.inform">
+        <div class="container">
+            <h4>
+                <UL>
+                    <LI>Гарантия качества продукции
+                    <LI>Бесплатная доставка от 1500р
+                    <LI>Доставка по всей территории РФ
+                    </LI>
+                 </UL>
+            </h4>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <div class="container">
+            <h5>Отзывы клиентов</h5>
+            <p>"Очень довольна продуктом! Удлинила реснички на вау" - Ирина П.
+            <p>"Продукт превзошел все мои ожидания. Рекомендую!" - Мария Р.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Контактная информация: svim@qmail.com | +7 (908) 543-33-33</p>
+        </div>
+    </footer>
+
+</body>
+</html>
