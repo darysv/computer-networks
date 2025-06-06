@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px 40px;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1 {
+    color: #4CAF50; /* зеленый цвет заголовка */
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 700px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+

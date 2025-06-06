@@ -1,0 +1,12 @@
+p {
+  font-family: Times New Roman, serif; /* основной шрифт */
+  font-size: 16px;
+}
+
+p::first-letter {
+  font-family: Arial, sans-serif; /* шрифт первой буквы */
+  color: red;                     /* красный цвет */
+  font-size: 36px;                /* увеличенный размер */
+  font-weight: bold;              /* жирный шрифт */
+}
+
